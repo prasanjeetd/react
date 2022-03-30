@@ -1,6 +1,6 @@
 import { createStore } from "redux";
 
-const initialState = {
+export const initialState = {
   auth: { loggedIn: true },
   user: { profile: {name:"Redux"}}
 };

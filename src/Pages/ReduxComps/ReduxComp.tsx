@@ -7,13 +7,18 @@ const ReduxComponent = (props: any) => {
 
   // const logOut = () => props.dispatch({type:"LOG_OUT"});
 
-  const logOut = () => props.logOut();
+  const logOut = () => {
+    console.log("button clicked");
+    props.logOut();
+  };
 
   return props.loggedIn ? (
     <>
       <div>You are logged in</div>
 
-      <button onClick={logOut}> Log Out </button>
+      <button data-testid="logout-btn" onClick={logOut}>
+        Log Out
+      </button>
     </>
   ) : (
     <div>Please login to view profile.</div>
