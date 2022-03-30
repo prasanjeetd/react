@@ -19,6 +19,18 @@ const Navigation = () => {
         <li>
           <Link to="app/page1">Page1</Link>
         </li>
+        <li>
+          <Link to="app/hoc">Higher order Component (HoC)</Link>
+        </li>
+        <li>
+          <Link to="app/advanced-ts">Advanced Typescript</Link>
+        </li>
+        <li>
+          <Link to="app/generic-ts">Generic Typescript</Link>
+        </li>
+        <li>
+          <Link to="app/redux">Redux</Link>
+        </li>
       </ul>
     </nav>
   );
