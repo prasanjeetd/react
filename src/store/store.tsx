@@ -2,11 +2,10 @@ import { createStore } from "redux";
 
 export const initialState = {
   auth: { loggedIn: true },
-  user: { profile: {name:"Redux"}}
+  user: { profile: { name: "Redux" } },
 };
 
-//should it be a reducer
-const store = createStore((state: any = initialState, action) => {
+export const reducer = (state: any = initialState, action: any) => {
   switch (action.type) {
     case "LOG_IN":
       return { ...state, auth: { loggedIn: true } };
@@ -15,8 +14,11 @@ const store = createStore((state: any = initialState, action) => {
     default:
       return state;
   }
-});
+};
 
-export const logoutAC =() => ({ type: "LOG_OUT" });
+//should it be a reducer
+const store = createStore(reducer);
+
+export const logoutAC = () => ({ type: "LOG_OUT" });
 
 export default store;
