@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { AdvancedTS } from "./AdvancedTs";
+import { ContextContainer } from "./ContextComp";
 import { GenericTS } from "./GenericTS";
 import { HoCExample } from "./HoC";
 import { Home } from "./Home/Home";
@@ -23,6 +24,7 @@ const AppRouter = () => {
           <Route path="generic-ts" element={<GenericTS />} />
           <Route path="redux" element={<ProviderComponent />} />
         </Route>
+        <Route path="context" element={<ContextContainer />}></Route>
       </Routes>
     </div>
   );

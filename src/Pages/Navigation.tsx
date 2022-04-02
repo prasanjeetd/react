@@ -14,6 +14,9 @@ const Navigation = () => {
           <Link to="app">App</Link>
         </li>
         <li>
+          <Link to="context">Context</Link>
+        </li>
+        <li>
           <Link to="app/home">Home</Link>
         </li>
         <li>
