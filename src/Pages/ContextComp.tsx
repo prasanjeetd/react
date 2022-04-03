@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState } from "react";
 const data = {
   name: "Billa",
 };
-const SampleContext = createContext<{ name: string } | null>(null);
+export const SampleContext = createContext<{ name: string } | null>(null);
 
 export const ContextContainer = () => {
   const [name, setName] = useState(data);
@@ -22,7 +22,7 @@ export const ContextContainer = () => {
   );
 };
 
-const ContextConsumer = (props: any) => {
+export const ContextConsumer = (props: any) => {
   const { name } = props;
   const contextValue = useContext(SampleContext);
 
@@ -38,7 +38,7 @@ const InnerComponent = () => {
   const contextValue = useContext(SampleContext);
   return (
     <div>
-      This is inner component context consumer{" "}
+      This is inner component context consumer
       <span> {contextValue?.name}</span>
     </div>
   );
